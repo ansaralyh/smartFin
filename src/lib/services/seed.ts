@@ -17,9 +17,6 @@ export async function ensureUserSetup(userId: string) {
   await getCategories(userId);
 }
 
-/** @deprecated use ensureUserSetup */
-export const ensureUserData = ensureUserSetup;
-
 /** Wipe all financial records for a user (keeps account + categories). */
 export async function resetUserFinancialData(userId: string) {
   await connectDB();

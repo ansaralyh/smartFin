@@ -29,10 +29,3 @@ export function getEnv(): Env {
   cached = parsed.data;
   return cached;
 }
-
-/** @deprecated use getEnv() */
-export const env = new Proxy({} as Env, {
-  get(_target, prop: string) {
-    return getEnv()[prop as keyof Env];
-  },
-});

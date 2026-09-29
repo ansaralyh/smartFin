@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --text: #1e293b;
+  --text-secondary: #64748b;
+  --border: #e2e8f0;
+  --brand: #0891b2;
+  --brand-hover: #0e7490;
+  --brand-soft: #ecfeff;
+  --brand-muted: #cffafe;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --warning: #d97706;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-text-secondary: var(--text-secondary);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-muted: var(--brand-muted);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+  --font-sans: var(--font-inter);
+
+  /* Legacy aliases used in components */
+  --color-brand-darker: #0e7490;
+  --color-brand-dark: #0e7490;
+  --color-brand-light: #cffafe;
+  --color-brand-subtle: #ecfeff;
+  --color-muted: #64748b;
+  --color-foreground: #1e293b;
+  --color-income: #16a34a;
+  --color-expense: #dc2626;
+  --color-gold: #d97706;
+  --color-navy: #1e3a5f;
+  --color-navy-dark: #0f172a;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #cffafe;
+  color: #0e7490;
+}
+
+/* Landing */
+.hero-gradient {
+  background: linear-gradient(180deg, #ecfeff 0%, #f5f7fa 100%);
+}
+
+.section-label {
+  color: var(--brand);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.finance-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.finance-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+/* Portal */
+.portal-shell {
+  background: var(--bg);
+}
+
+.portal-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
